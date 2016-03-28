@@ -18,5 +18,5 @@ SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-Create Procedure SP_GetQue @EntryName VarChar(100),@TokenNo VarChar(50) as begin begin Try Insert into Que_Entry (EntryName,TokenNo,QueTime) Values (@EntryName,@TokenNo,getdate() ) Select 'Success' as QStatus end Try begin Catch Select 'Failed' as QStatus  end Catch end 
+CREATE Procedure SP_GetQue @EntryName VarChar(100),@TokenNo VarChar(50) as begin begin Try Insert into Que_Entry (EntryName,TokenNo,QueTime) Values (@EntryName,@TokenNo,getdate() ) Select 'Success' as QStatus end Try begin Catch Select 'Failed' as QStatus  end Catch end --select * from fdfhjhdfjshdfjlsdhjfhsdjfhljdshjhfds
 GO
